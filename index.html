@@ -173,7 +173,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-03-02 20:51:04 / 修改时间：21:21:21" itemprop="dateCreated datePublished" datetime="2021-03-02T20:51:04+08:00">2021-03-02</time>
+              <time title="创建时间：2021-03-02 20:51:04 / 修改时间：21:58:45" itemprop="dateCreated datePublished" datetime="2021-03-02T20:51:04+08:00">2021-03-02</time>
             </span>
 
           
@@ -187,43 +187,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <img src='../latex_imgs/20160425102233543.jpg'>
-
-<img src='../latex_imgs/20160425102245006.jpg'>
-
-<img src='../latex_imgs/20160425102255522.jpg'>
-
-<img src='../latex_imgs/20160425102304887.jpg'>
-
-<img src='../latex_imgs/20160425102314538.jpg'>
-
-<img src='../latex_imgs/20160425102321231.jpg'>
-
-<img src='../latex_imgs/20160425102326710.jpg'>
-
-<img src='../latex_imgs/20160425102332919.jpg'>
-
-<img src='../latex_imgs/20160425102344044.jpg'>
-
-<img src='../latex_imgs/20160425102352044.jpg'>
-
-<img src='../latex_imgs/20160425102358648.jpg'>
-
-<img src='../latex_imgs/20160425102406153.jpg'>
-
-<img src='../latex_imgs/20160425102414367.jpg'>
-
-<img src='../latex_imgs/20160425102421669.jpg'>
-
-<img src='../latex_imgs/20160425102429414.jpg'>
-
-<img src='../latex_imgs/20160425102436966.jpg'>
-
-<img src='../latex_imgs/20160425102444185.jpg'>
-
-<img src='../latex_imgs/20160425102452321.jpg'>
-
-<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
+          <p><img src='/images/latex_imgs/20160425102233543.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102245006.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102255522.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102304887.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102314538.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102321231.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102326710.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102332919.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102344044.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102352044.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102358648.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102406153.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102414367.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102421669.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102429414.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102436966.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102444185.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102452321.jpg'></p>
+<h4 id="参考链接">参考链接</h4>
+<ul>
 <li><a target="_blank" rel="noopener" href='https://blog.csdn.net/Ying_Xu/article/details/51240291'>Latex所有常用数学符号整理</a></li>
 </ul>
 
@@ -290,14 +273,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="Install-Dependencies"><a href="#Install-Dependencies" class="headerlink" title="Install Dependencies"></a>Install Dependencies</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 需要先卸载默认的渲染引擎</span><br><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-pandoc --save</span><br></pre></td></tr></table></figure>
-
-<h4 id="Configure"><a href="#Configure" class="headerlink" title="Configure"></a>Configure</h4><p>next文件夹下_config.yml这两个地方默认为False，更改为True</p>
+          <h4 id="install-dependencies">Install Dependencies</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 需要先卸载默认的渲染引擎</span><br><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-pandoc --save</span><br></pre></td></tr></table></figure>
+<h4 id="configure">Configure</h4>
+<p>next文件夹下_config.yml这两个地方默认为False，更改为True</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mathjax:</span><br><span class="line">    enable: true</span><br><span class="line">    # See: https:&#x2F;&#x2F;mhchem.github.io&#x2F;MathJax-mhchem&#x2F;</span><br><span class="line">    mhchem: true</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>在每个md文件的头部加上<code>mathjax: true</code>即可</p>
-<h4 id="测试公式"><a href="#测试公式" class="headerlink" title="测试公式"></a>测试公式</h4><p>$\sigma(x)=\frac{1}{1+e^{-x}}$ </p>
-<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
+<h4 id="使用">使用</h4>
+<p>在每个md文件的头部加上<code>mathjax: true</code>即可</p>
+<h4 id="测试公式">测试公式</h4>
+<p><span class="math inline">\(\sigma(x)=\frac{1}{1+e^{-x}}\)</span></p>
+<h4 id="参考链接">参考链接</h4>
+<ul>
 <li><a herf='https://www.codewoody.com/posts/20215/'>Hexo+Next: 使用Latex公式</a></li>
 </ul>
 
