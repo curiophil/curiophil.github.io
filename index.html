@@ -148,6 +148,264 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/09/linux%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="cuanHaoQi">
+      <meta itemprop="description" content="努力努力努力努力">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="珍品菲尔的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/09/linux%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86/" class="post-title-link" itemprop="url">linux软件包管理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-09 15:45:25 / 修改时间：16:27:39" itemprop="dateCreated datePublished" datetime="2021-05-09T15:45:25+08:00">2021-05-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="rpm">RPM</h3>
+<h4 id="rpm概述">RPM概述</h4>
+<p>RPM（RedHat Package Manager），RedHat软件包管理工具，类似windows里面的setup.exe</p>
+<p>是Linux这系列操作系统里面的打包安装工具，它虽然是RedHat的标志，但理念是通用的。</p>
+<p>RPM包的名称格式</p>
+<p>Apache-1.3.23-11.i386.rpm</p>
+<ul>
+<li><p>“apache” 软件名称</p></li>
+<li><p>“1.3.23-11”软件的版本号，主版本和此版本</p></li>
+<li><p>“i386”是软件所运行的硬件平台，Intel 32位微处理器的统称</p></li>
+<li><p>“rpm”文件扩展名，代表RPM包</p></li>
+</ul>
+<h4 id="rpm查询命令rpm--qa">RPM查询命令（rpm -qa）</h4>
+<ul>
+<li>基本语法</li>
+</ul>
+<p>rpm -qa （功能描述：查询所安装的所有rpm软件包）</p>
+<ul>
+<li>经验技巧</li>
+</ul>
+<p>由于软件包比较多，一般都会采取过滤。<strong>rpm -qa | grep rpm</strong>软件包</p>
+<ul>
+<li><p>案例实操</p>
+<ol type="1">
+<li><p>查询firefox软件安装情况</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# rpm -qa | grep firefox</span><br><span class="line">firefox-68.10.0-1.el7.centos.x86_64</span><br></pre></td></tr></table></figure></li>
+</ol></li>
+</ul>
+<h4 id="rpm卸载命令rpm--e">RPM卸载命令（rpm -e）</h4>
+<ul>
+<li>基本语法</li>
+</ul>
+<p>（1）rpm -e RPM软件包</p>
+<p>（2） <strong>rpm -e --nodeps</strong> <strong>软件包</strong></p>
+<ul>
+<li>选项说明</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-e</td>
+<td>卸载软件包</td>
+</tr>
+<tr class="even">
+<td>--nodeps</td>
+<td>卸载软件时，不检查依赖。这样的话，那些使用该软件包的软件在此之后可能就不能正常工作了。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>案例实操</p>
+<ol type="1">
+<li><p>卸载firefox软件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# rpm -e firefox</span><br></pre></td></tr></table></figure></li>
+</ol></li>
+</ul>
+<h4 id="rpm安装命令rpm--ivh">RPM安装命令（rpm -ivh）</h4>
+<ul>
+<li>基本语法</li>
+</ul>
+<p><strong>rpm -ivh RPM包全名</strong></p>
+<ul>
+<li>选项说明</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-i</td>
+<td>-i=install，安装</td>
+</tr>
+<tr class="even">
+<td>-v</td>
+<td>-v=verbose，显示详细信息</td>
+</tr>
+<tr class="odd">
+<td>-h</td>
+<td>-h=hash，进度条</td>
+</tr>
+<tr class="even">
+<td>--nodeps</td>
+<td>--nodeps，不检测依赖进度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>案例实操</p>
+<ol type="1">
+<li><p>安装firefox软件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 Packages]# rpm -ivh firefox-45.0.1-1.el6.centos.x86_64.rpm </span><br></pre></td></tr></table></figure></li>
+</ol></li>
+</ul>
+<h3 id="yum仓库配置">YUM仓库配置</h3>
+<h4 id="yum概述">YUM概述</h4>
+<p>YUM（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及CentOS中的Shell前端软件包管理器。基于RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装</p>
+<h4 id="yum的常用命令">YUM的常用命令</h4>
+<ul>
+<li>基本语法</li>
+</ul>
+<p>yum [选项] [参数]</p>
+<ul>
+<li>选项说明</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-y</td>
+<td>对所有提问都回答“yes”</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>参数说明</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>install</td>
+<td>安装rpm软件包</td>
+</tr>
+<tr class="even">
+<td>update</td>
+<td>更新rpm软件包</td>
+</tr>
+<tr class="odd">
+<td>check-update</td>
+<td>检查是否有可用的更新rpm软件包</td>
+</tr>
+<tr class="even">
+<td>remove</td>
+<td>删除指定的rpm软件包</td>
+</tr>
+<tr class="odd">
+<td>list</td>
+<td>显示软件包信息</td>
+</tr>
+<tr class="even">
+<td>clean</td>
+<td>清理yum过期的缓存</td>
+</tr>
+<tr class="odd">
+<td>deplist</td>
+<td>显示yum软件包的所有依赖关系</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>案例实操实操</p>
+<ol type="1">
+<li><p>采用yum方式安装firefox</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]#yum -y install firefox.x86_64</span><br></pre></td></tr></table></figure></li>
+</ol></li>
+</ul>
+<h4 id="修改网络yum源">修改网络YUM源</h4>
+<p>默认的系统YUM源，需要连接国外apache网站，网速比较慢，可以修改关联的网络YUM源为国内镜像的网站，比如网易163。</p>
+<ul>
+<li>前期文件准备</li>
+</ul>
+<p>（1）前提条件linux系统必须可以联网</p>
+<p>（2）在Linux环境中访问该网络地址：http://mirrors.163.com/.help/centos.html，在使用说明中点击CentOS7-&gt;再点击保存</p>
+<p>（3）查看文件保存的位置</p>
+<ul>
+<li>替换本地yum文件</li>
+</ul>
+<p>（1）把下载的文件移动到/etc/yum.repos.d/目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 Downloads]# mv CentOS7-Base-163.repo /etc/yum.repos.d/</span><br></pre></td></tr></table></figure>
+<p>（2）进入到/etc/yum.repos.d/目录</p>
+<p>（3）用CentOS7-Base-163.repo替换CentOS-Base.repo</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 yum.repos.d]# mv CentOS7-Base-163.repo CentOS-Base.repo</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装命令</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 yum.repos.d]# yum clean all</span><br><span class="line">[root@hadoop100 yum.repos.d]# yum makecache</span><br></pre></td></tr></table></figure>
+<ul>
+<li>测试</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 yum.repos.d]# yum list | grep firefox</span><br><span class="line">firefox.x86_64                              78.10.0-1.el7.centos       @updates </span><br><span class="line">firefox.i686                                78.10.0-1.el7.centos       updates </span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/07/linux%E5%B8%B8%E7%94%A8%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -193,42 +451,45 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h3><h4 id="man-获得帮助信息"><a href="#man-获得帮助信息" class="headerlink" title="man 获得帮助信息"></a>man 获得帮助信息</h4><ul>
+          <h3 id="帮助命令">帮助命令</h3>
+<h4 id="man-获得帮助信息">man 获得帮助信息</h4>
+<ul>
 <li>基本语法</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man [命令或配置文件]</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>显示说明</li>
 </ul>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>信息</th>
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td>NAME</td>
 <td>命令的名称和单行描述</td>
 </tr>
-<tr>
+<tr class="even">
 <td>SYNOPSIS</td>
 <td>怎样使用命令</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>DESCRIPTION</td>
 <td>命令功能的深入讨论</td>
 </tr>
-<tr>
+<tr class="even">
 <td>EXAMPLES</td>
 <td>怎样使用命令的例子</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>SEE ALSO</td>
 <td>相关主题（通常是手册页）</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/05/07/linux%E5%B8%B8%E7%94%A8%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/#more" rel="contents">
@@ -300,11 +561,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="基本语法（centos7）"><a href="#基本语法（centos7）" class="headerlink" title="基本语法（centos7）"></a>基本语法（centos7）</h2><h3 id="临时后台服务管理"><a href="#临时后台服务管理" class="headerlink" title="临时后台服务管理"></a>临时后台服务管理</h3><h4 id="开启服务"><a href="#开启服务" class="headerlink" title="开启服务"></a>开启服务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start 服务名</span><br></pre></td></tr></table></figure>
-
-<h4 id="关闭服务"><a href="#关闭服务" class="headerlink" title="关闭服务"></a>关闭服务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop 服务名</span><br></pre></td></tr></table></figure>
-
-<h4 id="重新启动服务"><a href="#重新启动服务" class="headerlink" title="重新启动服务"></a>重新启动服务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart 服务名</span><br></pre></td></tr></table></figure>
+          <h2 id="基本语法centos7">基本语法（centos7）</h2>
+<h3 id="临时后台服务管理">临时后台服务管理</h3>
+<h4 id="开启服务">开启服务</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start 服务名</span><br></pre></td></tr></table></figure>
+<h4 id="关闭服务">关闭服务</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop 服务名</span><br></pre></td></tr></table></figure>
+<h4 id="重新启动服务">重新启动服务</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart 服务名</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/29/linux%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/#more" rel="contents">
@@ -370,19 +634,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="bin-usr-bin-、-usr-local-bin"><a href="#bin-usr-bin-、-usr-local-bin" class="headerlink" title="/bin (/usr/bin 、 /usr/local/bin)"></a>/bin (/usr/bin 、 /usr/local/bin)</h4><ul>
+          <h4 id="bin-usrbin-usrlocalbin">/bin (/usr/bin 、 /usr/local/bin)</h4>
+<ul>
 <li>是Binary的缩写, 这个目录存放着最经常使用的命令</li>
 </ul>
-<h4 id="sbin-usr-sbin-、-usr-local-sbin"><a href="#sbin-usr-sbin-、-usr-local-sbin" class="headerlink" title="/sbin  (/usr/sbin 、 /usr/local/sbin)"></a>/sbin  (/usr/sbin 、 /usr/local/sbin)</h4><ul>
+<h4 id="sbin-usrsbin-usrlocalsbin">/sbin (/usr/sbin 、 /usr/local/sbin)</h4>
+<ul>
 <li>s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序</li>
 </ul>
-<h4 id="home"><a href="#home" class="headerlink" title="/home"></a>/home</h4><ul>
+<h4 id="home">/home</h4>
+<ul>
 <li>存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的</li>
 </ul>
-<h4 id="root"><a href="#root" class="headerlink" title="/root"></a>/root</h4><ul>
+<h4 id="root">/root</h4>
+<ul>
 <li>该目录为系统管理员，也称作超级权限者的用户主目录</li>
 </ul>
-<h4 id="lib"><a href="#lib" class="headerlink" title="/lib"></a>/lib</h4><ul>
+<h4 id="lib">/lib</h4>
+<ul>
 <li>系统开机所需要最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库。</li>
 </ul>
           <!--noindex-->
@@ -450,12 +719,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="root环境安装nb-conda"><a href="#root环境安装nb-conda" class="headerlink" title="root环境安装nb_conda"></a>root环境安装nb_conda</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install nb_conda</span><br></pre></td></tr></table></figure>
-
-<h4 id="虚拟环境安装ipykernel"><a href="#虚拟环境安装ipykernel" class="headerlink" title="虚拟环境安装ipykernel"></a>虚拟环境安装ipykernel</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install ipykernel</span><br></pre></td></tr></table></figure>
-
-<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
-<li><a target="_blank" rel="noopener" href='https://www.cnblogs.com/chmusk/p/12465873.html'><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chmusk/p/12465873.html">Anaconda 和 Jupyter notebook</a></a> </li>
+          <h4 id="root环境安装nb_conda">root环境安装nb_conda</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install nb_conda</span><br></pre></td></tr></table></figure>
+<h4 id="虚拟环境安装ipykernel">虚拟环境安装ipykernel</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install ipykernel</span><br></pre></td></tr></table></figure>
+<h4 id="参考链接">参考链接</h4>
+<ul>
+<li><a target="_blank" rel="noopener" href='https://www.cnblogs.com/chmusk/p/12465873.html'><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chmusk/p/12465873.html">Anaconda 和 Jupyter notebook</a></a></li>
 </ul>
 
       
@@ -515,7 +785,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
+          <h4 id="参考链接">参考链接</h4>
+<ul>
 <li><a target="_blank" rel="noopener" href='https://blog.csdn.net/weixin_48241292/article/details/109468947'>模拟退火算法</a></li>
 <li><a target="_blank" rel="noopener" href='https://blog.csdn.net/u010451580/article/details/51178225'>遗传算法</a></li>
 <li><a target="_blank" rel="noopener" href='https://blog.csdn.net/guoyunlei/article/details/76101899'>广义回归神经网路</a></li>
@@ -578,10 +849,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
+          <h4 id="参考链接">参考链接</h4>
+<ul>
 <li><a target="_blank" rel="noopener" href='https://zhuanlan.zhihu.com/p/108156241'>手把手教你如何重装win10系统，自己动手安装系统其实很简单</a></li>
 </ul>
-<h4 id="win10-激活软件"><a href="#win10-激活软件" class="headerlink" title="win10 激活软件"></a>win10 激活软件</h4><p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1ptVXNrSte5A3-Lt1EjhbaA">https://pan.baidu.com/s/1ptVXNrSte5A3-Lt1EjhbaA</a><br>提取码：pebm </p>
+<h4 id="win10-激活软件">win10 激活软件</h4>
+<p>链接：https://pan.baidu.com/s/1ptVXNrSte5A3-Lt1EjhbaA 提取码：pebm</p>
 
       
     </div>
@@ -640,9 +913,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <img src='/images/latex_imgs/20160425102233543.jpg'>
-
-<img src='/images/latex_imgs/20160425102245006.jpg'>
+          <p><img src='/images/latex_imgs/20160425102233543.jpg'></p>
+<p><img src='/images/latex_imgs/20160425102245006.jpg'></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/02/latex%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/#more" rel="contents">
@@ -714,14 +986,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="Install-Dependencies"><a href="#Install-Dependencies" class="headerlink" title="Install Dependencies"></a>Install Dependencies</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 需要先卸载默认的渲染引擎</span><br><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-pandoc --save</span><br></pre></td></tr></table></figure>
-
-<h4 id="Configure"><a href="#Configure" class="headerlink" title="Configure"></a>Configure</h4><p>next文件夹下_config.yml这两个地方默认为False，更改为True</p>
+          <h4 id="install-dependencies">Install Dependencies</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 需要先卸载默认的渲染引擎</span><br><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-pandoc --save</span><br></pre></td></tr></table></figure>
+<h4 id="configure">Configure</h4>
+<p>next文件夹下_config.yml这两个地方默认为False，更改为True</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mathjax:</span><br><span class="line">    enable: true</span><br><span class="line">    # See: https:&#x2F;&#x2F;mhchem.github.io&#x2F;MathJax-mhchem&#x2F;</span><br><span class="line">    mhchem: true</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>在每个md文件的头部加上<code>mathjax: true</code>即可</p>
-<h4 id="测试公式"><a href="#测试公式" class="headerlink" title="测试公式"></a>测试公式</h4><p>$\sigma(x)=\frac{1}{1+e^{-x}}$ </p>
-<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
+<h4 id="使用">使用</h4>
+<p>在每个md文件的头部加上<code>mathjax: true</code>即可</p>
+<h4 id="测试公式">测试公式</h4>
+<p><span class="math inline">\(\sigma(x)=\frac{1}{1+e^{-x}}\)</span></p>
+<h4 id="参考链接">参考链接</h4>
+<ul>
 <li><a target="_blank" rel="noopener" href='https://www.codewoody.com/posts/20215/'>Hexo+Next: 使用Latex公式</a></li>
 </ul>
 
@@ -805,7 +1080,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
