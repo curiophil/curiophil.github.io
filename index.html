@@ -173,7 +173,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-09 15:45:25 / 修改时间：16:27:39" itemprop="dateCreated datePublished" datetime="2021-05-09T15:45:25+08:00">2021-05-09</time>
+              <time title="创建时间：2021-05-09 15:45:25 / 修改时间：16:30:13" itemprop="dateCreated datePublished" datetime="2021-05-09T15:45:25+08:00">2021-05-09</time>
             </span>
 
           
@@ -194,200 +194,19 @@
 <p>RPM包的名称格式</p>
 <p>Apache-1.3.23-11.i386.rpm</p>
 <ul>
-<li><p>“apache” 软件名称</p></li>
-<li><p>“1.3.23-11”软件的版本号，主版本和此版本</p></li>
-<li><p>“i386”是软件所运行的硬件平台，Intel 32位微处理器的统称</p></li>
-<li><p>“rpm”文件扩展名，代表RPM包</p></li>
+<li>“apache” 软件名称</li>
+<li>“1.3.23-11”软件的版本号，主版本和此版本</li>
+<li>“i386”是软件所运行的硬件平台，Intel 32位微处理器的统称</li>
+<li>“rpm”文件扩展名，代表RPM包</li>
 </ul>
-<h4 id="rpm查询命令rpm--qa">RPM查询命令（rpm -qa）</h4>
-<ul>
-<li>基本语法</li>
-</ul>
-<p>rpm -qa （功能描述：查询所安装的所有rpm软件包）</p>
-<ul>
-<li>经验技巧</li>
-</ul>
-<p>由于软件包比较多，一般都会采取过滤。<strong>rpm -qa | grep rpm</strong>软件包</p>
-<ul>
-<li><p>案例实操</p>
-<ol type="1">
-<li><p>查询firefox软件安装情况</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# rpm -qa | grep firefox</span><br><span class="line">firefox-68.10.0-1.el7.centos.x86_64</span><br></pre></td></tr></table></figure></li>
-</ol></li>
-</ul>
-<h4 id="rpm卸载命令rpm--e">RPM卸载命令（rpm -e）</h4>
-<ul>
-<li>基本语法</li>
-</ul>
-<p>（1）rpm -e RPM软件包</p>
-<p>（2） <strong>rpm -e --nodeps</strong> <strong>软件包</strong></p>
-<ul>
-<li>选项说明</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>选项</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>-e</td>
-<td>卸载软件包</td>
-</tr>
-<tr class="even">
-<td>--nodeps</td>
-<td>卸载软件时，不检查依赖。这样的话，那些使用该软件包的软件在此之后可能就不能正常工作了。</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>案例实操</p>
-<ol type="1">
-<li><p>卸载firefox软件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# rpm -e firefox</span><br></pre></td></tr></table></figure></li>
-</ol></li>
-</ul>
-<h4 id="rpm安装命令rpm--ivh">RPM安装命令（rpm -ivh）</h4>
-<ul>
-<li>基本语法</li>
-</ul>
-<p><strong>rpm -ivh RPM包全名</strong></p>
-<ul>
-<li>选项说明</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>选项</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>-i</td>
-<td>-i=install，安装</td>
-</tr>
-<tr class="even">
-<td>-v</td>
-<td>-v=verbose，显示详细信息</td>
-</tr>
-<tr class="odd">
-<td>-h</td>
-<td>-h=hash，进度条</td>
-</tr>
-<tr class="even">
-<td>--nodeps</td>
-<td>--nodeps，不检测依赖进度</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>案例实操</p>
-<ol type="1">
-<li><p>安装firefox软件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 Packages]# rpm -ivh firefox-45.0.1-1.el6.centos.x86_64.rpm </span><br></pre></td></tr></table></figure></li>
-</ol></li>
-</ul>
-<h3 id="yum仓库配置">YUM仓库配置</h3>
-<h4 id="yum概述">YUM概述</h4>
-<p>YUM（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及CentOS中的Shell前端软件包管理器。基于RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装</p>
-<h4 id="yum的常用命令">YUM的常用命令</h4>
-<ul>
-<li>基本语法</li>
-</ul>
-<p>yum [选项] [参数]</p>
-<ul>
-<li>选项说明</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>选项</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>-y</td>
-<td>对所有提问都回答“yes”</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>参数说明</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>参数</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>install</td>
-<td>安装rpm软件包</td>
-</tr>
-<tr class="even">
-<td>update</td>
-<td>更新rpm软件包</td>
-</tr>
-<tr class="odd">
-<td>check-update</td>
-<td>检查是否有可用的更新rpm软件包</td>
-</tr>
-<tr class="even">
-<td>remove</td>
-<td>删除指定的rpm软件包</td>
-</tr>
-<tr class="odd">
-<td>list</td>
-<td>显示软件包信息</td>
-</tr>
-<tr class="even">
-<td>clean</td>
-<td>清理yum过期的缓存</td>
-</tr>
-<tr class="odd">
-<td>deplist</td>
-<td>显示yum软件包的所有依赖关系</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>案例实操实操</p>
-<ol type="1">
-<li><p>采用yum方式安装firefox</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]#yum -y install firefox.x86_64</span><br></pre></td></tr></table></figure></li>
-</ol></li>
-</ul>
-<h4 id="修改网络yum源">修改网络YUM源</h4>
-<p>默认的系统YUM源，需要连接国外apache网站，网速比较慢，可以修改关联的网络YUM源为国内镜像的网站，比如网易163。</p>
-<ul>
-<li>前期文件准备</li>
-</ul>
-<p>（1）前提条件linux系统必须可以联网</p>
-<p>（2）在Linux环境中访问该网络地址：http://mirrors.163.com/.help/centos.html，在使用说明中点击CentOS7-&gt;再点击保存</p>
-<p>（3）查看文件保存的位置</p>
-<ul>
-<li>替换本地yum文件</li>
-</ul>
-<p>（1）把下载的文件移动到/etc/yum.repos.d/目录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 Downloads]# mv CentOS7-Base-163.repo /etc/yum.repos.d/</span><br></pre></td></tr></table></figure>
-<p>（2）进入到/etc/yum.repos.d/目录</p>
-<p>（3）用CentOS7-Base-163.repo替换CentOS-Base.repo</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 yum.repos.d]# mv CentOS7-Base-163.repo CentOS-Base.repo</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装命令</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 yum.repos.d]# yum clean all</span><br><span class="line">[root@hadoop100 yum.repos.d]# yum makecache</span><br></pre></td></tr></table></figure>
-<ul>
-<li>测试</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 yum.repos.d]# yum list | grep firefox</span><br><span class="line">firefox.x86_64                              78.10.0-1.el7.centos       @updates </span><br><span class="line">firefox.i686                                78.10.0-1.el7.centos       updates </span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/09/linux%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
