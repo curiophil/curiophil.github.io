@@ -207,7 +207,6 @@
 <li>“rpm”文件扩展名，代表RPM包</li>
 </ul>
 <span id="more"></span>
-
 <h4 id="RPM查询命令（rpm-qa）"><a href="#RPM查询命令（rpm-qa）" class="headerlink" title="RPM查询命令（rpm -qa）"></a>RPM查询命令（rpm -qa）</h4><ul>
 <li>基本语法</li>
 </ul>
@@ -221,7 +220,6 @@
 <ol>
 <li><p>查询firefox软件安装情况</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# rpm -qa | grep firefox</span><br><span class="line">firefox-68.10.0-1.el7.centos.x86_64</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -230,10 +228,11 @@
 <li>基本语法</li>
 </ul>
 <p>（1）rpm -e RPM软件包  </p>
-<p>（2） <strong>rpm -e –nodeps</strong> <strong>软件包</strong> </p>
+<p>（2） <strong>rpm -e —nodeps</strong> <strong>软件包</strong> </p>
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -241,21 +240,23 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-e</td>
 <td>卸载软件包</td>
 </tr>
 <tr>
-<td>–nodeps</td>
+<td>—nodeps</td>
 <td>卸载软件时，不检查依赖。这样的话，那些使用该软件包的软件在此之后可能就不能正常工作了。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>卸载firefox软件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# rpm -e firefox</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -267,6 +268,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -274,7 +276,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-i</td>
 <td>-i=install，安装</td>
 </tr>
@@ -287,16 +290,17 @@
 <td>-h=hash，进度条</td>
 </tr>
 <tr>
-<td>–nodeps</td>
-<td>–nodeps，不检测依赖进度</td>
+<td>—nodeps</td>
+<td>—nodeps，不检测依赖进度</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>安装firefox软件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 Packages]# rpm -ivh firefox-45.0.1-1.el6.centos.x86_64.rpm </span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -309,6 +313,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -316,14 +321,18 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-y</td>
 <td>对所有提问都回答“yes”</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>参数说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -331,7 +340,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>install</td>
 <td>安装rpm软件包</td>
 </tr>
@@ -359,13 +369,14 @@
 <td>deplist</td>
 <td>显示yum软件包的所有依赖关系</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操实操</p>
 <ol>
 <li><p>采用yum方式安装firefox</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]#yum -y install firefox.x86_64</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -382,21 +393,17 @@
 </ul>
 <p>（1）把下载的文件移动到/etc/yum.repos.d/目录</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 Downloads]# mv CentOS7-Base-163.repo /etc/yum.repos.d/</span><br></pre></td></tr></table></figure>
-
 <p>（2）进入到/etc/yum.repos.d/目录</p>
 <p>（3）用CentOS7-Base-163.repo替换CentOS-Base.repo</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 yum.repos.d]# mv CentOS7-Base-163.repo CentOS-Base.repo</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>安装命令</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 yum.repos.d]# yum clean all</span><br><span class="line">[root@hadoop100 yum.repos.d]# yum makecache</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>测试</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 yum.repos.d]# yum list | grep firefox</span><br><span class="line">firefox.x86_64                              78.10.0-1.el7.centos       @updates </span><br><span class="line">firefox.i686                                78.10.0-1.el7.centos       updates </span><br></pre></td></tr></table></figure>
-
 
     </div>
 

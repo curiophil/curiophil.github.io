@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="帮助命令man 获得帮助信息 基本语法  1man [命令或配置文件]   显示说明     信息 功能    NAME 命令的名称和单行描述   SYNOPSIS 怎样使用命令   DESCRIPTION 命令功能的深入讨论   EXAMPLES 怎样使用命令的例子   SEE ALSO 相关主题（通常是手册页）">
+  <meta name="description" content="帮助命令man 获得帮助信息 基本语法  1man [命令或配置文件]  显示说明      信息 功能     NAME 命令的名称和单行描述   SYNOPSIS 怎样使用命令   DESCRIPTION 命令功能的深入讨论   EXAMPLES 怎样使用命令的例子   SEE ALSO 相关主题（通常是手册页）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux常用基本命令">
 <meta property="og:url" content="http://example.com/2021/05/07/linux%E5%B8%B8%E7%94%A8%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="珍品菲尔的博客">
-<meta property="og:description" content="帮助命令man 获得帮助信息 基本语法  1man [命令或配置文件]   显示说明     信息 功能    NAME 命令的名称和单行描述   SYNOPSIS 怎样使用命令   DESCRIPTION 命令功能的深入讨论   EXAMPLES 怎样使用命令的例子   SEE ALSO 相关主题（通常是手册页）">
+<meta property="og:description" content="帮助命令man 获得帮助信息 基本语法  1man [命令或配置文件]  显示说明      信息 功能     NAME 命令的名称和单行描述   SYNOPSIS 怎样使用命令   DESCRIPTION 命令功能的深入讨论   EXAMPLES 怎样使用命令的例子   SEE ALSO 相关主题（通常是手册页）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/linux_imgs/wenjianshuxing.png">
 <meta property="og:image" content="http://example.com/images/linux_imgs/jibenyufa.png">
@@ -203,10 +203,10 @@
 <li>基本语法</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man [命令或配置文件]</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>显示说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -214,7 +214,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>NAME</td>
 <td>命令的名称和单行描述</td>
 </tr>
@@ -234,16 +235,15 @@
 <td>SEE ALSO</td>
 <td>相关主题（通常是手册页）</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <span id="more"></span>
-
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>查看ls命令的帮助信息</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# man ls</span><br></pre></td></tr></table></figure>
-
-
 </li>
 </ol>
 </li>
@@ -252,49 +252,49 @@
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">help 命令</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>查看cd命令的帮助信息</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# help cd</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
 </ul>
-<h4 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h4><table>
+<h4 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h4><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">常用快捷键</th>
-<th align="left">功能</th>
+<th style="text-align:left">常用快捷键</th>
+<th style="text-align:left">功能</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">ctrl + c</td>
-<td align="left">停止进程</td>
+<tbody>
+<tr>
+<td style="text-align:left">ctrl + c</td>
+<td style="text-align:left">停止进程</td>
 </tr>
 <tr>
-<td align="left">ctrl + l</td>
-<td align="left">reset</td>
+<td style="text-align:left">ctrl + l</td>
+<td style="text-align:left">reset</td>
 </tr>
 <tr>
-<td align="left">ctrl + q</td>
-<td align="left">退出</td>
+<td style="text-align:left">ctrl + q</td>
+<td style="text-align:left">退出</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="文件目录类"><a href="#文件目录类" class="headerlink" title="文件目录类"></a>文件目录类</h3><h4 id="pwd-显示当前工作目录的绝对路径"><a href="#pwd-显示当前工作目录的绝对路径" class="headerlink" title="pwd 显示当前工作目录的绝对路径"></a>pwd 显示当前工作目录的绝对路径</h4><p>ls:list 列出目录内容</p>
 <ul>
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>显示当前工作目录的绝对路径</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# pwd</span><br><span class="line">/root</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -303,10 +303,10 @@
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls [选项] [目录或是文件]</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -314,7 +314,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-a</td>
 <td>全部的文件，连同隐藏档( 开头为 . 的文件) 一起列出来(常用)</td>
 </tr>
@@ -322,7 +323,9 @@
 <td>-l</td>
 <td>长数据串列出，包含文件的属性与权限等等数据；(常用)</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>显示说明</li>
 </ul>
@@ -332,7 +335,6 @@
 <ol>
 <li><p>查看当前目录的所有内容信息</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# ls -al</span><br><span class="line">total 60</span><br><span class="line">dr-xr-x---. 15 root root 4096 May  7 15:45 .</span><br><span class="line">dr-xr-xr-x. 17 root root  224 Apr 29 17:23 ..</span><br><span class="line">-rw-------.  1 root root 1533 Apr 29 17:24 anaconda-ks.cfg</span><br><span class="line">-rw-------.  1 root root 1057 Apr 30 16:41 .bash_history</span><br><span class="line">-rw-r--r--.  1 root root   18 Dec 29  2013 .bash_logout</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -342,10 +344,10 @@
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd  [参数]</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>参数说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -353,7 +355,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>cd 绝对路径</td>
 <td>切换路径</td>
 </tr>
@@ -377,7 +380,9 @@
 <td>cd -P</td>
 <td>跳转到实际物理路径，而非快捷方式路径</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -395,7 +400,6 @@
 </li>
 <li><p>表示回到当前目录的上一级目录，亦即是 “/root/Public”的上一级目录的意思</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 Public]# cd ..</span><br><span class="line">[root@hadoop100 ~]# </span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -405,10 +409,10 @@
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir [选项] 要创建的目录</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -416,11 +420,14 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-p</td>
 <td>创建多层目录</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -429,7 +436,6 @@
 </li>
 <li><p>创建一个多级目录</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# mkdir -p a/b/c</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -439,13 +445,11 @@
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir 要删除的空目录</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>删除一个空的文件夹</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# rmdir a/b/c test/test/ #删除掉c和第二级的test</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -454,20 +458,18 @@
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch 文件名称</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>案例实操</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# touch a.txt</span><br></pre></td></tr></table></figure>
-
 <h4 id="cp-复制文件或目录"><a href="#cp-复制文件或目录" class="headerlink" title="cp 复制文件或目录"></a>cp 复制文件或目录</h4><ul>
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp [选项] source dest 				（功能描述：复制source文件到dest）</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -475,14 +477,18 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-r</td>
 <td>递归复制整个文件夹</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>参数说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -490,7 +496,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>source</td>
 <td>源文件</td>
 </tr>
@@ -498,7 +505,9 @@
 <td>dest</td>
 <td>目标文件</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>经验技巧</li>
 </ul>
@@ -511,7 +520,6 @@
 </li>
 <li><p>递归复制整个文件夹</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# cp -r test/test a/b/c</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -520,10 +528,10 @@
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm [选项] deleteFile        （功能描述：递归删除目录中所有内容）</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -531,7 +539,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-r</td>
 <td>递归删除目录中所有内容</td>
 </tr>
@@ -543,7 +552,9 @@
 <td>-v</td>
 <td>显示指令的详细执行过程</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -552,7 +563,6 @@
 </li>
 <li><p>递归删除目录中所有内容</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# rm -rf a/</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -571,7 +581,6 @@
 </li>
 <li><p>移动文件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# mv a/b/c/a.txt a/b/</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -581,10 +590,10 @@
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat  [选项] 要查看的文件</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -592,11 +601,14 @@
 <th>功能描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-n</td>
 <td>显示所有行的行号，包括空行。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>经验技巧</li>
 </ul>
@@ -606,7 +618,6 @@
 <ol>
 <li><p>查看文件内容并显示行号</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# cat -n a/b/a.txt</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -619,6 +630,7 @@
 <ul>
 <li>操作说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -626,7 +638,8 @@
 <th>功能说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>空格键 (space)</td>
 <td>代表向下翻一页</td>
 </tr>
@@ -654,13 +667,14 @@
 <td>:f</td>
 <td>输出文件名和当前行的行号</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>采用more查看文件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# more anaconda-ks.cfg</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -673,6 +687,7 @@
 <ul>
 <li>操作说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -680,7 +695,8 @@
 <th>功能说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>空格键</td>
 <td>向下翻动一页</td>
 </tr>
@@ -704,13 +720,14 @@
 <td>q</td>
 <td>离开 less 这个程序；</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>采用less查看文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# less anaconda-ks.cfg</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -720,9 +737,9 @@
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo [选项] [输出内容]</span><br></pre></td></tr></table></figure>
-
 <p>选项：</p>
 <p>​    -e： 支持反斜线控制的字符转换</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -730,7 +747,8 @@
 <th>作用</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>\</td>
 <td>输出\本身</td>
 </tr>
@@ -742,11 +760,12 @@
 <td>\t</td>
 <td>制表符，也就是Tab键</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# echo -e &quot;hello\nworld&quot;</span><br><span class="line">hello</span><br><span class="line">world</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <h4 id="head-显示文件头部内容"><a href="#head-显示文件头部内容" class="headerlink" title="head 显示文件头部内容"></a>head 显示文件头部内容</h4><p>head用于显示文件的开头部分内容，默认情况下head指令显示文件的前10行内容。</p>
@@ -758,6 +777,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -765,17 +785,19 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-n &lt;行数&gt;</td>
 <td>指定显示头部内容的行数</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>查看文件的头2行</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# head -n 8 anaconda-ks.cfg</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -790,6 +812,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -797,7 +820,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-n&lt;行数&gt;</td>
 <td>输出文件尾部n行内容</td>
 </tr>
@@ -805,7 +829,9 @@
 <td>-f</td>
 <td>显示文件最新追加的内容，监视文件变化</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -814,12 +840,11 @@
 </li>
 <li><p>实时追踪该档的所有更新</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# tail -f a/b/a.txt</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
 </ul>
-<h4 id="gt-覆盖-和-gt-gt-追加"><a href="#gt-覆盖-和-gt-gt-追加" class="headerlink" title="&gt; 覆盖 和 &gt;&gt; 追加"></a>&gt; 覆盖 和 &gt;&gt; 追加</h4><ul>
+<h4 id="覆盖-和-gt-gt-追加"><a href="#覆盖-和-gt-gt-追加" class="headerlink" title="> 覆盖 和 &gt;&gt; 追加"></a>> 覆盖 和 &gt;&gt; 追加</h4><ul>
 <li>基本语法</li>
 </ul>
 <p>ll &gt;文件       （功能描述：列表的内容写入文件a.txt中（<strong>覆盖写</strong>））</p>
@@ -837,7 +862,6 @@
 </li>
 <li><p>采用echo将hello单词追加到文件中</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# echo hello &gt;&gt; ls.txt</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -863,7 +887,6 @@
 </li>
 <li><p>进入软连接实际物理路径</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# ln -s a/b/ c</span><br><span class="line">[root@hadoop100 ~]# cd -P c</span><br><span class="line">[root@hadoop100 b]#</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -872,13 +895,11 @@
 <li>基本语法</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">history						（功能描述：查看已经执行过历史命令）</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>实操实例</p>
 <ol>
 <li><p>查看已经执行过的历史命令</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# history</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -893,7 +914,6 @@
 <ol>
 <li><p>添加一个用户</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 bin]# useradd zhangsan</span><br><span class="line">[root@hadoop100 bin]# ll /home/</span><br><span class="line">drwx------.  5 zhangsan  zhangsan   107 May  7 20:22 zhangsan</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -907,7 +927,6 @@
 <ol>
 <li><p>设置用户的密码</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 bin]# passwd zhangsan</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -921,13 +940,11 @@
 <ol>
 <li><p>查看用户是否存在</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 bin]# id zhangsan</span><br><span class="line">uid=1001(zhangsan) gid=1001(zhangsan) groups=1001(zhangsan)</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
 </ul>
 <h4 id="cat-etc-passwd-查看创建了哪些用户"><a href="#cat-etc-passwd-查看创建了哪些用户" class="headerlink" title="cat /etc/passwd 查看创建了哪些用户"></a>cat /etc/passwd 查看创建了哪些用户</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# cat /etc/passwd</span><br></pre></td></tr></table></figure>
-
 <h4 id="su-切换用户"><a href="#su-切换用户" class="headerlink" title="su 切换用户"></a>su 切换用户</h4><p>su: swith user 切换用户</p>
 <ul>
 <li>基本语法</li>
@@ -939,7 +956,6 @@
 <ol>
 <li><p>切换用户</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# su zhangsan</span><br><span class="line">[zhangsan@hadoop100 root]$ echo $PATH</span><br><span class="line">/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin</span><br><span class="line"></span><br><span class="line">[root@hadoop100 ~]# su - zhangsan</span><br><span class="line">[zhangsan@hadoop100 ~]$ echo $PATH</span><br><span class="line">/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/zhangsan/.local/bin:/home/zhangsan/bin</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -952,6 +968,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -959,11 +976,14 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-r</td>
 <td>删除用户的同时，删除与用户相关的所有文件。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -972,7 +992,6 @@
 </li>
 <li><p>删除用户和用户主目录，都删除</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# useradd zhangsan</span><br><span class="line">useradd: warning: the home directory already exists.</span><br><span class="line">Not copying any file from skel directory into it.</span><br><span class="line">[root@hadoop100 ~]# userdel -r zhangsan</span><br><span class="line">[root@hadoop100 ~]# ll /home/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -990,7 +1009,6 @@
 </li>
 <li><p>显示登录用户的用户名</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# su - curiophil</span><br><span class="line">Last login: Fri May  7 20:22:18 CST 2021 on pts/0</span><br><span class="line">[curiophil@hadoop100 ~]$ who am i </span><br><span class="line">root     pts/0        2021-05-07 20:42 (192.168.1.3)</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1002,20 +1020,16 @@
 </li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]#vi /etc/sudoers</span><br></pre></td></tr></table></figure>
-
 <p>修改 /etc/sudoers 文件，找到下面一行(99行)，在root下面添加一行，如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">##Allow root to run any commands anywhere</span><br><span class="line">root    ALL&#x3D;(ALL)       ALL</span><br><span class="line">zhangsan   ALL&#x3D;(ALL)     ALL</span><br></pre></td></tr></table></figure>
-
 <p>或者配置成采用sudo命令时，不需要输入密码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## Allow root to run any commands anywhere</span><br><span class="line">root      ALL&#x3D;(ALL)     ALL</span><br><span class="line">zhangsan   ALL&#x3D;(ALL)     NOPASSWD:ALL</span><br></pre></td></tr></table></figure>
-
 <p>修改完毕，现在可以用zhangsan帐号登录，然后用命令 sudo ，即可获得root权限进行操作。</p>
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>用普通用户在/opt目录下创建一个文件夹</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[zhangsan@hadoop100 opt]$ sudo mkdir module</span><br><span class="line">[root@hadoop100 opt]# chown zhangsan:zhangsan module/</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1027,6 +1041,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1034,17 +1049,19 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-g</td>
 <td>修改用户的初始登录组，给定的组必须存在</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>将用户加入到用户组</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 opt]#usermod -g root zhangsan</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1053,9 +1070,7 @@
 <p>如Linux下的用户属于与它同名的用户组，这个用户组在创建用户时同时创建。</p>
 <p>用户组的管理涉及用户组的添加、删除和修改。组的增加、删除和修改实际上就是对/etc/group文件的更新。</p>
 <h4 id="groupadd-新增组"><a href="#groupadd-新增组" class="headerlink" title="groupadd 新增组"></a>groupadd 新增组</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]#groupadd lisi</span><br></pre></td></tr></table></figure>
-
 <h4 id="groupdel-删除组"><a href="#groupdel-删除组" class="headerlink" title="groupdel 删除组"></a>groupdel 删除组</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# groupdel lisi</span><br></pre></td></tr></table></figure>
-
 <h4 id="groupmod-修改组"><a href="#groupmod-修改组" class="headerlink" title="groupmod 修改组"></a>groupmod 修改组</h4><ul>
 <li>基本语法</li>
 </ul>
@@ -1063,6 +1078,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1070,23 +1086,24 @@
 <th>功能描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-n&lt;新组名&gt;</td>
 <td>指定工作组的新组名</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
 <li><p>修改lisi组名称为lisi1</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]#groupadd lisi</span><br><span class="line">[root@hadoop100 ~]# groupmod -n lisi1 lisi</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
 </ul>
 <h4 id="cat-etc-group-查看创建了哪些组"><a href="#cat-etc-group-查看创建了哪些组" class="headerlink" title="cat /etc/group 查看创建了哪些组"></a>cat /etc/group 查看创建了哪些组</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# cat /etc/group</span><br></pre></td></tr></table></figure>
-
 <h3 id="文件权限类"><a href="#文件权限类" class="headerlink" title="文件权限类"></a>文件权限类</h3><h4 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h4><p>Linux系统是一种典型的多用户系统，不同的用户处于不同的地位，拥有不同的权限。为了保护系统的安全性，Linux系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定。在Linux中我们可以使用ll或者ls -l命令来显示一个文件的属性以及文件所属的用户和组。</p>
 <ul>
 <li><p>从左到右的10个字符表示，如图所示。<img src='/images/linux_imgs/wenjianshuxing.png'> 如果没有权限，就会出现减号[ - ]而已。从左至右用0-9这些数字来表示:</p>
@@ -1097,12 +1114,10 @@
 <p> d 代表目录</p>
 <p> l 链接文档(link file)；</p>
 </li>
-<li><p>第1-3位确定属主（该文件的所有者）拥有该文件的权限。—User</p>
+<li><p>第1-3位确定属主（该文件的所有者）拥有该文件的权限。—-User</p>
 </li>
-<li><p>第4-6位确定属组（所有者的同组用户）拥有该文件的权限，—Group</p>
-</li>
-<li><p>第7-9位确定其他用户拥有该文件的权限 —Other</p>
-</li>
+<li>第4-6位确定属组（所有者的同组用户）拥有该文件的权限，—-Group</li>
+<li>第7-9位确定其他用户拥有该文件的权限 —-Other</li>
 </ol>
 </li>
 <li><p>rxw作用文件和目录的不同解释</p>
@@ -1123,7 +1138,6 @@
 </li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# ll</span><br><span class="line">total 8</span><br><span class="line">-rw-------. 1 root root 1533 Apr 29 17:24 anaconda-ks.cfg</span><br></pre></td></tr></table></figure>
-
 <ol>
 <li><p>如果查看到是文件：链接数指的是硬链接个数。创建硬链接方法</p>
 <p>ln [原文件] [目标文件]     </p>
@@ -1135,8 +1149,7 @@
 <h4 id="chmod-改变权限"><a href="#chmod-改变权限" class="headerlink" title="chmod 改变权限"></a>chmod 改变权限</h4><ul>
 <li>基本语法</li>
 </ul>
-<img src='/images/linux_imgs/jibenyufa.png'>
-
+<p><img src='/images/linux_imgs/jibenyufa.png'></p>
 <p>第一种方式变更权限</p>
 <p>​       chmod [{ugoa}{+-=}{rwx}] 文件或目录</p>
 <p>第二种方式变更权限</p>
@@ -1163,7 +1176,6 @@
 </li>
 <li><p>修改整个文件夹里面的所有文件的所有者、所属组、其他用户都具有可读可写可执行权限。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# chmod -R 777 a/</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1175,6 +1187,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1182,11 +1195,14 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-R</td>
 <td>递归操作</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -1195,7 +1211,6 @@
 </li>
 <li><p>递归改变文件所有者和所有组</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# chown -R curiophil:curiophil a/</span><br><span class="line">drwxr-xr-x. 3 curiophil curiophil   15 May  7 21:32 a</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1209,7 +1224,6 @@
 <ol>
 <li><p>修改文件的所属组</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# chgrp curiophil a.txt </span><br><span class="line">[root@hadoop100 ~]# ll</span><br><span class="line">-rwxr-xr--. 1 curiophil curiophil    0 May  7 21:35 a.txt</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1222,6 +1236,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1229,7 +1244,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-name&lt;查询方式&gt;</td>
 <td>按照指定的文件名查找模式查找文件</td>
 </tr>
@@ -1241,7 +1257,9 @@
 <td>-size&lt;文件大小&gt;</td>
 <td>按照指定的文件大小查找文件。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -1253,7 +1271,6 @@
 </li>
 <li><p>按文件大小：在/home目录下查找大于200m的文件（+n 大于 -n小于  n等于）</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# find /home/ -size +204800</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1271,7 +1288,6 @@
 <ol>
 <li><p>查找某文件在第几行</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# ls | grep -n Doc</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1285,7 +1301,6 @@
 <li>案例实操</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# which ll</span><br><span class="line">alias ll=&#x27;ls -l --color=auto&#x27;</span><br><span class="line">	/usr/bin/ls</span><br></pre></td></tr></table></figure>
-
 <h3 id="压缩和解压类"><a href="#压缩和解压类" class="headerlink" title="压缩和解压类"></a>压缩和解压类</h3><h4 id="gzip-gunzip-压缩"><a href="#gzip-gunzip-压缩" class="headerlink" title="gzip/gunzip 压缩"></a>gzip/gunzip 压缩</h4><ul>
 <li>基本语法</li>
 </ul>
@@ -1304,7 +1319,6 @@
 </li>
 <li><p>gunzip解压缩文件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# gunzip a.txt.gz</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1317,6 +1331,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1324,11 +1339,15 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-r</td>
 <td>压缩目录</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1336,11 +1355,14 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-d&lt;目录&gt;</td>
 <td>指定解压后文件的存放目录</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>经验技巧</li>
 </ul>
@@ -1356,7 +1378,6 @@
 </li>
 <li><p>解压mypackage.zip到指定目录-d</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# unzip -d mypackage mypackage.zip </span><br><span class="line">Archive:  mypackage.zip</span><br><span class="line"> extracting: mypackage/a.txt         </span><br><span class="line"> extracting: mypackage/b.txt</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1368,6 +1389,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1375,7 +1397,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-z</td>
 <td>打包同时压缩</td>
 </tr>
@@ -1395,7 +1418,9 @@
 <td><strong>-x</strong></td>
 <td><strong>解包.tar文件</strong></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -1410,7 +1435,6 @@
 </li>
 <li><p>解压到指定目录</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# mkdir a</span><br><span class="line">[root@hadoop100 ~]# tar -zxvf mypackage.tar.gz -C a/</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1429,7 +1453,6 @@
 <ol>
 <li><p>查看磁盘使用情况</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 a]# df -h</span><br><span class="line">Filesystem               Size  Used Avail Use% Mounted on</span><br><span class="line">devtmpfs                 974M     0  974M   0% /dev</span><br><span class="line">tmpfs                    991M     0  991M   0% /dev/shm</span><br><span class="line">tmpfs                    991M   11M  980M   2% /run</span><br><span class="line">tmpfs                    991M     0  991M   0% /sys/fs/cgroup</span><br><span class="line">/dev/mapper/centos-root   47G  4.9G   43G  11% /</span><br><span class="line">/dev/sda1               1014M  172M  843M  17% /boot</span><br><span class="line">tmpfs                    199M   12K  199M   1% /run/user/42</span><br><span class="line">tmpfs                    199M     0  199M   0% /run/user/0</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1461,7 +1484,6 @@
 <ol>
 <li><p>查看系统分区情况</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 a]# fdisk -l</span><br><span class="line"></span><br><span class="line">Disk /dev/sda: 53.7 GB, 53687091200 bytes, 104857600 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk label type: dos</span><br><span class="line">Disk identifier: 0x000a0d1e</span><br><span class="line"></span><br><span class="line">   Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/sda1   *        2048     2099199     1048576   83  Linux</span><br><span class="line">/dev/sda2         2099200   104857599    51379200   8e  Linux LVM</span><br><span class="line"></span><br><span class="line">Disk /dev/mapper/centos-root: 50.5 GB, 50457477120 bytes, 98549760 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Disk /dev/mapper/centos-swap: 2147 MB, 2147483648 bytes, 4194304 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1476,6 +1498,7 @@
 <ul>
 <li>参数说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1483,7 +1506,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-t vfstype</td>
 <td>指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：光盘或光盘镜像：iso9660，DOS fat16文件系统：msdos，<a target="_blank" rel="noopener" href="http://blog.csdn.net/hancunai0017/article/details/6995284">Windows</a> 9x fat32文件系统：vfat， Windows NT ntfs文件系统：ntfs， Mount Windows文件<a target="_blank" rel="noopener" href="http://blog.csdn.net/hancunai0017/article/details/6995284">网络</a>共享：smbfs， <a target="_blank" rel="noopener" href="http://blog.csdn.net/hancunai0017/article/details/6995284">UNIX</a>(LINUX) 文件网络共享：nfs</td>
 </tr>
@@ -1499,7 +1523,9 @@
 <td>dir</td>
 <td>设备在系统上的挂接点(mount point)</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -1515,7 +1541,6 @@
 </li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 mnt]# vim /etc/fstab</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 尾部加一行</span></span><br><span class="line">/dev/cdrom /mnt/cd</span><br></pre></td></tr></table></figure>
-
 <h3 id="进程线程类"><a href="#进程线程类" class="headerlink" title="进程线程类"></a>进程线程类</h3><p>进程是正在执行的一个程序或命令，每一个进程都是一个运行的实体，都有自己的地址空间，并占用一定的系统资源。</p>
 <h4 id="ps-查看当前系统进程状态"><a href="#ps-查看当前系统进程状态" class="headerlink" title="ps 查看当前系统进程状态"></a>ps 查看当前系统进程状态</h4><p>ps:process status 进程状态</p>
 <ul>
@@ -1526,6 +1551,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1533,7 +1559,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-a</td>
 <td>选择所有进程</td>
 </tr>
@@ -1545,7 +1572,9 @@
 <td>-x</td>
 <td>显示没有终端的进程</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>功能说明</li>
 </ul>
@@ -1578,9 +1607,7 @@
 <ul>
 <li><p>案例实操</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# ps -aux</span><br><span class="line">USER        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND</span><br><span class="line">root          1  0.3  0.3 193816  6372 ?        Ss   12:00   0:02 /usr/lib/systemd/systemd --switched-root --system --deserialize 22</span><br><span class="line">root          2  0.0  0.0      0     0 ?        S    12:00   0:00 [kthreadd]</span><br><span class="line">root          3  0.0  0.0      0     0 ?        S    12:00   0:00 [kworker/0:0]</span><br><span class="line">root          4  0.0  0.0      0     0 ?        S&lt;   12:00   0:00 [kworker/0:0H]</span><br><span class="line">root          6  0.0  0.0      0     0 ?        S    12:00   0:00 [ksoftirqd/0]</span><br><span class="line">root          7  0.6  0.0      0     0 ?        S    12:00   0:04 [migration/0]</span><br><span class="line">root          8  0.0  0.0      0     0 ?        S    12:00   0:00 [rcu_bh]</span><br><span class="line">root          9  0.0  0.0      0     0 ?        S    12:00   0:00 [rcu_sched]</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# ps -ef</span><br><span class="line">UID         PID   PPID  C STIME TTY          TIME CMD</span><br><span class="line">root          1      0  0 12:00 ?        00:00:02 /usr/lib/systemd/systemd --switched-root --system --deserialize 22</span><br><span class="line">root          2      0  0 12:00 ?        00:00:00 [kthreadd]</span><br><span class="line">root          3      2  0 12:00 ?        00:00:00 [kworker/0:0]</span><br><span class="line">root          4      2  0 12:00 ?        00:00:00 [kworker/0:0H]</span><br><span class="line">root          6      2  0 12:00 ?        00:00:00 [ksoftirqd/0]</span><br><span class="line">root          7      2  0 12:00 ?        00:00:04 [migration/0]</span><br><span class="line">root          8      2  0 12:00 ?        00:00:00 [rcu_bh]</span><br><span class="line">root          9      2  0 12:00 ?        00:00:00 [rcu_sched]</span><br><span class="line">root         10      2  0 12:00 ?        00:00:00 [lru-add-drain]</span><br><span class="line">root         11      2  0 12:00 ?        00:00:00 [watchdog/0]</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <h4 id="kill-终止进程"><a href="#kill-终止进程" class="headerlink" title="kill 终止进程"></a>kill 终止进程</h4><ul>
@@ -1600,7 +1627,6 @@
 </li>
 <li><p>通过进程名称杀死进程</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# killall firefox</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1612,6 +1638,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1619,7 +1646,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-p</td>
 <td>显示进程的PID</td>
 </tr>
@@ -1627,7 +1655,9 @@
 <td>-u</td>
 <td>显示进程的所属用户</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -1636,7 +1666,6 @@
 </li>
 <li><p>显示进程所属用户</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# pstree -u</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1648,6 +1677,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1655,7 +1685,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-d 秒数</td>
 <td>指定top命令每隔几秒更新。默认是3秒在top命令的交互模式当中可以执行的命令：</td>
 </tr>
@@ -1667,10 +1698,13 @@
 <td>-p</td>
 <td>通过指定监控进程ID来仅仅监控某个进程的状态。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>操作说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1678,7 +1712,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>P</td>
 <td>以CPU使用率排序，默认就是此项</td>
 </tr>
@@ -1694,11 +1729,14 @@
 <td>q</td>
 <td>退出top</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>查询结果字段解释</li>
 </ul>
 <p>第一行信息为任务队列信息</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1706,7 +1744,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>12:26:46</td>
 <td>系统当前时间</td>
 </tr>
@@ -1722,8 +1761,11 @@
 <td>load average:   0.00, 0.00, 0.00</td>
 <td>系统在之前1分钟，5分钟，15分钟的平均负载。一般认为小于1时，负载较小。如果大于1，系统已经超出负荷。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>第二行为进程信息</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1731,7 +1773,8 @@
 <th>系统中的进程总数</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1 running</td>
 <td>正在运行的进程数</td>
 </tr>
@@ -1747,8 +1790,11 @@
 <td>0 zombie</td>
 <td>僵尸进程。如果不是0，需要手工检查僵尸进程</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>第三行为CPU信息</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1756,7 +1802,8 @@
 <th>用户模式占用的CPU百分比</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>0.1%sy</td>
 <td>系统模式占用的CPU百分比</td>
 </tr>
@@ -1784,8 +1831,11 @@
 <td>0.0%st</td>
 <td>st（Steal time）虚拟时间百分比。就是当有虚拟机时，虚拟CPU等待实际CPU的时间百分比。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>第四行为物理内存信息</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1793,7 +1843,8 @@
 <th>物理内存的总量，单位KB</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>571504k used</td>
 <td>已经使用的物理内存数量</td>
 </tr>
@@ -1805,8 +1856,11 @@
 <td>65800k buffers</td>
 <td>作为缓冲的内存数量</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>第五行为交换分区（swap）信息</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1814,7 +1868,8 @@
 <th>交换分区（虚拟内存）的总大小</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>0k used</td>
 <td>已经使用的交互分区的大小</td>
 </tr>
@@ -1826,11 +1881,12 @@
 <td>409280k cached</td>
 <td>作为缓存的交互分区的大小</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# top -d 1</span><br><span class="line">[root@hadoop100 ~]# top -i</span><br><span class="line">[root@hadoop100 ~]# top -p 3306</span><br></pre></td></tr></table></figure>
-
 <p>执行上述命令后，可以按P、M、N对查询出的进程结果进行排序。</p>
 </li>
 </ul>
@@ -1842,6 +1898,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1849,7 +1906,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-n</td>
 <td>拒绝显示别名，能显示数字的全部转化成数字</td>
 </tr>
@@ -1861,7 +1919,9 @@
 <td>-p</td>
 <td>表示显示哪个进程在调用</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -1870,7 +1930,6 @@
 </li>
 <li><p>查看某端口号是否被占用</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# netstat -nlp | grep 4120</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 </li>
@@ -1879,7 +1938,6 @@
 <li>重新启动crond服务</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# service crond restart</span><br></pre></td></tr></table></figure>
-
 <h4 id="crontab-定时任务设置"><a href="#crontab-定时任务设置" class="headerlink" title="crontab 定时任务设置"></a>crontab 定时任务设置</h4><ul>
 <li>基本语法</li>
 </ul>
@@ -1887,6 +1945,7 @@
 <ul>
 <li>选项说明</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1894,7 +1953,8 @@
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-e</td>
 <td>编辑crontab定时任务</td>
 </tr>
@@ -1906,14 +1966,16 @@
 <td>-r</td>
 <td>删除当前用户所有的crontab任务</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>参数说明</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# crontab -e </span><br></pre></td></tr></table></figure>
-
 <p>（1）进入crontab编辑界面。会打开vim编辑你的工作。</p>
-<p>* * * * * 执行的任务</p>
+<p>* <em> </em> <em> </em> 执行的任务</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1922,7 +1984,8 @@
 <th>范围</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>第一个“*”</td>
 <td>一小时当中的第几分钟</td>
 <td>0-59</td>
@@ -1947,8 +2010,11 @@
 <td>一周当中的星期几</td>
 <td>0-7（0和7都代表星期日）</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>（2）特殊符号</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1956,24 +2022,28 @@
 <th>含义</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>*</td>
 <td>代表任何时间。比如第一个“*”就代表一小时中每分钟都执行一次的意思。</td>
 </tr>
 <tr>
 <td>，</td>
-<td>代表不连续的时间。比如“0 8,12,16 * * * 命令”，就代表在每天的8点0分，12点0分，16点0分都执行一次命令</td>
+<td>代表不连续的时间。比如“0 8,12,16 <em> </em> * 命令”，就代表在每天的8点0分，12点0分，16点0分都执行一次命令</td>
 </tr>
 <tr>
 <td>-</td>
-<td>代表连续的时间范围。比如“0 5 *   * 1-6命令”，代表在周一到周六的凌晨5点0分执行命令</td>
+<td>代表连续的时间范围。比如“0 5 <em>   </em> 1-6命令”，代表在周一到周六的凌晨5点0分执行命令</td>
 </tr>
 <tr>
 <td>*/n</td>
-<td>代表每隔多久执行一次。比如“*/10 *   * * * 命令”，代表每隔10分钟就执行一遍命令</td>
+<td>代表每隔多久执行一次。比如“<em>/10 </em>   <em> </em> * 命令”，代表每隔10分钟就执行一遍命令</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>（3）特定时间执行命令</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1981,31 +2051,34 @@
 <th>含义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>45 22 * * * 命令</td>
+<tbody>
+<tr>
+<td>45 22 <em> </em> * 命令</td>
 <td>在22点45分执行命令</td>
 </tr>
 <tr>
-<td>0 17 * * 1 命令</td>
+<td>0 17 <em> </em> 1 命令</td>
 <td>每周1 的17点0分执行命令</td>
 </tr>
 <tr>
-<td>0 5 1,15 * * 命令</td>
+<td>0 5 1,15 <em> </em> 命令</td>
 <td>每月1号和15号的凌晨5点0分执行命令</td>
 </tr>
 <tr>
-<td>40 4 * * 1-5 命令</td>
+<td>40 4 <em> </em> 1-5 命令</td>
 <td>每周一到周五的凌晨4点40分执行命令</td>
 </tr>
 <tr>
-<td>*/10 4 * * * 命令</td>
+<td><em>/10 4 </em> <em> </em> 命令</td>
 <td>每天的凌晨4点，每隔10分钟执行一次命令</td>
 </tr>
 <tr>
 <td>0 0 1,15 * 1 命令</td>
 <td>每月1号和15号，每周1的0点0分都会执行命令。注意：星期几和几号最好不要同时出现，因为他们定义的都是天。非常容易让管理员混乱。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -2097,7 +2170,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">帮助命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#man-%E8%8E%B7%E5%BE%97%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF"><span class="nav-number">1.1.</span> <span class="nav-text">man 获得帮助信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#help-%E8%8E%B7%E5%BE%97shell%E5%86%85%E7%BD%AE%E5%91%BD%E4%BB%A4%E7%9A%84%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF"><span class="nav-number">1.2.</span> <span class="nav-text">help 获得shell内置命令的帮助信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">1.3.</span> <span class="nav-text">常用快捷键</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">文件目录类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pwd-%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E7%9A%84%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">2.1.</span> <span class="nav-text">pwd 显示当前工作目录的绝对路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ls-%E5%88%97%E5%87%BA%E7%9B%AE%E5%BD%95%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">2.2.</span> <span class="nav-text">ls 列出目录的内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cd-%E5%88%87%E6%8D%A2%E7%9B%AE%E5%BD%95"><span class="nav-number">2.3.</span> <span class="nav-text">cd 切换目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mkdir-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E7%9B%AE%E5%BD%95"><span class="nav-number">2.4.</span> <span class="nav-text">mkdir 创建一个新的目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rmdir-%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E7%A9%BA%E7%9A%84%E7%9B%AE%E5%BD%95"><span class="nav-number">2.5.</span> <span class="nav-text">rmdir 删除一个空的目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#touch-%E5%88%9B%E5%BB%BA%E7%A9%BA%E6%96%87%E4%BB%B6"><span class="nav-number">2.6.</span> <span class="nav-text">touch 创建空文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp-%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95"><span class="nav-number">2.7.</span> <span class="nav-text">cp 复制文件或目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm-%E7%A7%BB%E9%99%A4%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95"><span class="nav-number">2.8.</span> <span class="nav-text">rm 移除文件或目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mv-%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E6%88%96%E9%87%8D%E5%91%BD%E5%90%8D"><span class="nav-number">2.9.</span> <span class="nav-text">mv 移动文件与目录或重命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat-%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">2.10.</span> <span class="nav-text">cat 查看文件内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#more-%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%88%86%E5%B1%8F%E6%9F%A5%E7%9C%8B%E5%99%A8"><span class="nav-number">2.11.</span> <span class="nav-text">more 文件内容分屏查看器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#less-%E5%88%86%E5%B1%8F%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">2.12.</span> <span class="nav-text">less 分屏显示文件内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#echo"><span class="nav-number">2.13.</span> <span class="nav-text">echo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#head-%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%A4%B4%E9%83%A8%E5%86%85%E5%AE%B9"><span class="nav-number">2.14.</span> <span class="nav-text">head 显示文件头部内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tail-%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E5%B0%BE%E9%83%A8%E5%86%85%E5%AE%B9"><span class="nav-number">2.15.</span> <span class="nav-text">tail 输出文件尾部内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gt-%E8%A6%86%E7%9B%96-%E5%92%8C-gt-gt-%E8%BF%BD%E5%8A%A0"><span class="nav-number">2.16.</span> <span class="nav-text">&gt; 覆盖 和 &gt;&gt; 追加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ln-%E8%BD%AF%E9%93%BE%E6%8E%A5"><span class="nav-number">2.17.</span> <span class="nav-text">ln 软链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#history-%E6%9F%A5%E7%9C%8B%E5%B7%B2%E7%BB%8F%E6%89%A7%E8%A1%8C%E8%BF%87%E5%8E%86%E5%8F%B2%E5%91%BD%E4%BB%A4"><span class="nav-number">2.18.</span> <span class="nav-text">history 查看已经执行过历史命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">用户管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#useradd-%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%94%A8%E6%88%B7"><span class="nav-number">3.1.</span> <span class="nav-text">useradd 添加新用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#passwd-%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81"><span class="nav-number">3.2.</span> <span class="nav-text">passwd 设置用户密码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#id-%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8"><span class="nav-number">3.3.</span> <span class="nav-text">id 查看用户是否存在</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat-etc-passwd-%E6%9F%A5%E7%9C%8B%E5%88%9B%E5%BB%BA%E4%BA%86%E5%93%AA%E4%BA%9B%E7%94%A8%E6%88%B7"><span class="nav-number">3.4.</span> <span class="nav-text">cat &#x2F;etc&#x2F;passwd 查看创建了哪些用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#su-%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7"><span class="nav-number">3.5.</span> <span class="nav-text">su 切换用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#userdel-%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="nav-number">3.6.</span> <span class="nav-text">userdel 删除用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#who-%E6%9F%A5%E7%9C%8B%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="nav-number">3.7.</span> <span class="nav-text">who 查看登录用户信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sudo-%E8%AE%BE%E7%BD%AE%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E5%85%B7%E6%9C%89root%E6%9D%83%E9%99%90"><span class="nav-number">3.8.</span> <span class="nav-text">sudo 设置普通用户具有root权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#usermod-%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7"><span class="nav-number">3.9.</span> <span class="nav-text">usermod 修改用户</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">用户组管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#groupadd-%E6%96%B0%E5%A2%9E%E7%BB%84"><span class="nav-number">4.1.</span> <span class="nav-text">groupadd 新增组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#groupdel-%E5%88%A0%E9%99%A4%E7%BB%84"><span class="nav-number">4.2.</span> <span class="nav-text">groupdel 删除组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#groupmod-%E4%BF%AE%E6%94%B9%E7%BB%84"><span class="nav-number">4.3.</span> <span class="nav-text">groupmod 修改组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat-etc-group-%E6%9F%A5%E7%9C%8B%E5%88%9B%E5%BB%BA%E4%BA%86%E5%93%AA%E4%BA%9B%E7%BB%84"><span class="nav-number">4.4.</span> <span class="nav-text">cat &#x2F;etc&#x2F;group 查看创建了哪些组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%B1%BB"><span class="nav-number">5.</span> <span class="nav-text">文件权限类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7"><span class="nav-number">5.1.</span> <span class="nav-text">文件属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chmod-%E6%94%B9%E5%8F%98%E6%9D%83%E9%99%90"><span class="nav-number">5.2.</span> <span class="nav-text">chmod 改变权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chown-%E6%94%B9%E5%8F%98%E6%89%80%E6%9C%89%E8%80%85"><span class="nav-number">5.3.</span> <span class="nav-text">chown 改变所有者</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chgrp-%E6%94%B9%E5%8F%98%E6%89%80%E5%B1%9E%E7%BB%84"><span class="nav-number">5.4.</span> <span class="nav-text">chgrp 改变所属组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%9F%A5%E6%89%BE%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">搜索查找类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#find-%E6%9F%A5%E6%89%BE%E6%96%87%E4%BB%B6%E6%88%96%E8%80%85%E7%9B%AE%E5%BD%95"><span class="nav-number">6.1.</span> <span class="nav-text">find 查找文件或者目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grep-%E8%BF%87%E6%BB%A4%E6%9F%A5%E6%89%BE%E5%8F%8A%E2%80%9C-%E2%80%9D%E7%AE%A1%E9%81%93%E7%AC%A6"><span class="nav-number">6.2.</span> <span class="nav-text">grep 过滤查找及“|”管道符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#which-%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4"><span class="nav-number">6.3.</span> <span class="nav-text">which 查找命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%B1%BB"><span class="nav-number">7.</span> <span class="nav-text">压缩和解压类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#gzip-gunzip-%E5%8E%8B%E7%BC%A9"><span class="nav-number">7.1.</span> <span class="nav-text">gzip&#x2F;gunzip 压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#zip-unzip-%E5%8E%8B%E7%BC%A9"><span class="nav-number">7.2.</span> <span class="nav-text">zip&#x2F;unzip 压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tar-%E6%89%93%E5%8C%85"><span class="nav-number">7.3.</span> <span class="nav-text">tar 打包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E7%B1%BB"><span class="nav-number">8.</span> <span class="nav-text">磁盘分区类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#df-%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">8.1.</span> <span class="nav-text">df 查看磁盘空间使用情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fdisk-%E6%9F%A5%E7%9C%8B%E5%88%86%E5%8C%BA"><span class="nav-number">8.2.</span> <span class="nav-text">fdisk 查看分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mount-umount-%E6%8C%82%E8%BD%BD-%E5%8D%B8%E8%BD%BD"><span class="nav-number">8.3.</span> <span class="nav-text">mount&#x2F;umount 挂载&#x2F;卸载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E7%B1%BB"><span class="nav-number">9.</span> <span class="nav-text">进程线程类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ps-%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E8%BF%9B%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="nav-number">9.1.</span> <span class="nav-text">ps 查看当前系统进程状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#kill-%E7%BB%88%E6%AD%A2%E8%BF%9B%E7%A8%8B"><span class="nav-number">9.2.</span> <span class="nav-text">kill 终止进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pstree-%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E6%A0%91"><span class="nav-number">9.3.</span> <span class="nav-text">pstree 查看进程树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#top-%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E5%81%A5%E5%BA%B7%E7%8A%B6%E6%80%81"><span class="nav-number">9.4.</span> <span class="nav-text">top 查看系统健康状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#netstat-%E6%98%BE%E7%A4%BA%E7%BD%91%E7%BB%9C%E7%BB%9F%E8%AE%A1%E4%BF%A1%E6%81%AF%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">9.5.</span> <span class="nav-text">netstat 显示网络统计信息和端口占用情况</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#crond-%E7%B3%BB%E7%BB%9F%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-number">10.</span> <span class="nav-text">crond 系统定时任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#crond-%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="nav-number">10.1.</span> <span class="nav-text">crond 服务管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#crontab-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E8%AE%BE%E7%BD%AE"><span class="nav-number">10.2.</span> <span class="nav-text">crontab 定时任务设置</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">帮助命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#man-%E8%8E%B7%E5%BE%97%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF"><span class="nav-number">1.1.</span> <span class="nav-text">man 获得帮助信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#help-%E8%8E%B7%E5%BE%97shell%E5%86%85%E7%BD%AE%E5%91%BD%E4%BB%A4%E7%9A%84%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF"><span class="nav-number">1.2.</span> <span class="nav-text">help 获得shell内置命令的帮助信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">1.3.</span> <span class="nav-text">常用快捷键</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">文件目录类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pwd-%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E7%9A%84%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">2.1.</span> <span class="nav-text">pwd 显示当前工作目录的绝对路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ls-%E5%88%97%E5%87%BA%E7%9B%AE%E5%BD%95%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">2.2.</span> <span class="nav-text">ls 列出目录的内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cd-%E5%88%87%E6%8D%A2%E7%9B%AE%E5%BD%95"><span class="nav-number">2.3.</span> <span class="nav-text">cd 切换目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mkdir-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E7%9B%AE%E5%BD%95"><span class="nav-number">2.4.</span> <span class="nav-text">mkdir 创建一个新的目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rmdir-%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E7%A9%BA%E7%9A%84%E7%9B%AE%E5%BD%95"><span class="nav-number">2.5.</span> <span class="nav-text">rmdir 删除一个空的目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#touch-%E5%88%9B%E5%BB%BA%E7%A9%BA%E6%96%87%E4%BB%B6"><span class="nav-number">2.6.</span> <span class="nav-text">touch 创建空文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp-%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95"><span class="nav-number">2.7.</span> <span class="nav-text">cp 复制文件或目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm-%E7%A7%BB%E9%99%A4%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95"><span class="nav-number">2.8.</span> <span class="nav-text">rm 移除文件或目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mv-%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E6%88%96%E9%87%8D%E5%91%BD%E5%90%8D"><span class="nav-number">2.9.</span> <span class="nav-text">mv 移动文件与目录或重命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat-%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">2.10.</span> <span class="nav-text">cat 查看文件内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#more-%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%88%86%E5%B1%8F%E6%9F%A5%E7%9C%8B%E5%99%A8"><span class="nav-number">2.11.</span> <span class="nav-text">more 文件内容分屏查看器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#less-%E5%88%86%E5%B1%8F%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">2.12.</span> <span class="nav-text">less 分屏显示文件内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#echo"><span class="nav-number">2.13.</span> <span class="nav-text">echo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#head-%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%A4%B4%E9%83%A8%E5%86%85%E5%AE%B9"><span class="nav-number">2.14.</span> <span class="nav-text">head 显示文件头部内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tail-%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E5%B0%BE%E9%83%A8%E5%86%85%E5%AE%B9"><span class="nav-number">2.15.</span> <span class="nav-text">tail 输出文件尾部内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A6%86%E7%9B%96-%E5%92%8C-gt-gt-%E8%BF%BD%E5%8A%A0"><span class="nav-number">2.16.</span> <span class="nav-text">&gt; 覆盖 和 &gt;&gt; 追加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ln-%E8%BD%AF%E9%93%BE%E6%8E%A5"><span class="nav-number">2.17.</span> <span class="nav-text">ln 软链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#history-%E6%9F%A5%E7%9C%8B%E5%B7%B2%E7%BB%8F%E6%89%A7%E8%A1%8C%E8%BF%87%E5%8E%86%E5%8F%B2%E5%91%BD%E4%BB%A4"><span class="nav-number">2.18.</span> <span class="nav-text">history 查看已经执行过历史命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">用户管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#useradd-%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%94%A8%E6%88%B7"><span class="nav-number">3.1.</span> <span class="nav-text">useradd 添加新用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#passwd-%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81"><span class="nav-number">3.2.</span> <span class="nav-text">passwd 设置用户密码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#id-%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8"><span class="nav-number">3.3.</span> <span class="nav-text">id 查看用户是否存在</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat-etc-passwd-%E6%9F%A5%E7%9C%8B%E5%88%9B%E5%BB%BA%E4%BA%86%E5%93%AA%E4%BA%9B%E7%94%A8%E6%88%B7"><span class="nav-number">3.4.</span> <span class="nav-text">cat &#x2F;etc&#x2F;passwd 查看创建了哪些用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#su-%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7"><span class="nav-number">3.5.</span> <span class="nav-text">su 切换用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#userdel-%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="nav-number">3.6.</span> <span class="nav-text">userdel 删除用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#who-%E6%9F%A5%E7%9C%8B%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="nav-number">3.7.</span> <span class="nav-text">who 查看登录用户信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sudo-%E8%AE%BE%E7%BD%AE%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E5%85%B7%E6%9C%89root%E6%9D%83%E9%99%90"><span class="nav-number">3.8.</span> <span class="nav-text">sudo 设置普通用户具有root权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#usermod-%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7"><span class="nav-number">3.9.</span> <span class="nav-text">usermod 修改用户</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">用户组管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#groupadd-%E6%96%B0%E5%A2%9E%E7%BB%84"><span class="nav-number">4.1.</span> <span class="nav-text">groupadd 新增组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#groupdel-%E5%88%A0%E9%99%A4%E7%BB%84"><span class="nav-number">4.2.</span> <span class="nav-text">groupdel 删除组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#groupmod-%E4%BF%AE%E6%94%B9%E7%BB%84"><span class="nav-number">4.3.</span> <span class="nav-text">groupmod 修改组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat-etc-group-%E6%9F%A5%E7%9C%8B%E5%88%9B%E5%BB%BA%E4%BA%86%E5%93%AA%E4%BA%9B%E7%BB%84"><span class="nav-number">4.4.</span> <span class="nav-text">cat &#x2F;etc&#x2F;group 查看创建了哪些组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%B1%BB"><span class="nav-number">5.</span> <span class="nav-text">文件权限类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7"><span class="nav-number">5.1.</span> <span class="nav-text">文件属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chmod-%E6%94%B9%E5%8F%98%E6%9D%83%E9%99%90"><span class="nav-number">5.2.</span> <span class="nav-text">chmod 改变权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chown-%E6%94%B9%E5%8F%98%E6%89%80%E6%9C%89%E8%80%85"><span class="nav-number">5.3.</span> <span class="nav-text">chown 改变所有者</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chgrp-%E6%94%B9%E5%8F%98%E6%89%80%E5%B1%9E%E7%BB%84"><span class="nav-number">5.4.</span> <span class="nav-text">chgrp 改变所属组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%9F%A5%E6%89%BE%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">搜索查找类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#find-%E6%9F%A5%E6%89%BE%E6%96%87%E4%BB%B6%E6%88%96%E8%80%85%E7%9B%AE%E5%BD%95"><span class="nav-number">6.1.</span> <span class="nav-text">find 查找文件或者目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grep-%E8%BF%87%E6%BB%A4%E6%9F%A5%E6%89%BE%E5%8F%8A%E2%80%9C-%E2%80%9D%E7%AE%A1%E9%81%93%E7%AC%A6"><span class="nav-number">6.2.</span> <span class="nav-text">grep 过滤查找及“|”管道符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#which-%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4"><span class="nav-number">6.3.</span> <span class="nav-text">which 查找命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%B1%BB"><span class="nav-number">7.</span> <span class="nav-text">压缩和解压类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#gzip-gunzip-%E5%8E%8B%E7%BC%A9"><span class="nav-number">7.1.</span> <span class="nav-text">gzip&#x2F;gunzip 压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#zip-unzip-%E5%8E%8B%E7%BC%A9"><span class="nav-number">7.2.</span> <span class="nav-text">zip&#x2F;unzip 压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tar-%E6%89%93%E5%8C%85"><span class="nav-number">7.3.</span> <span class="nav-text">tar 打包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E7%B1%BB"><span class="nav-number">8.</span> <span class="nav-text">磁盘分区类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#df-%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">8.1.</span> <span class="nav-text">df 查看磁盘空间使用情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fdisk-%E6%9F%A5%E7%9C%8B%E5%88%86%E5%8C%BA"><span class="nav-number">8.2.</span> <span class="nav-text">fdisk 查看分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mount-umount-%E6%8C%82%E8%BD%BD-%E5%8D%B8%E8%BD%BD"><span class="nav-number">8.3.</span> <span class="nav-text">mount&#x2F;umount 挂载&#x2F;卸载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E7%B1%BB"><span class="nav-number">9.</span> <span class="nav-text">进程线程类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ps-%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E8%BF%9B%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="nav-number">9.1.</span> <span class="nav-text">ps 查看当前系统进程状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#kill-%E7%BB%88%E6%AD%A2%E8%BF%9B%E7%A8%8B"><span class="nav-number">9.2.</span> <span class="nav-text">kill 终止进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pstree-%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E6%A0%91"><span class="nav-number">9.3.</span> <span class="nav-text">pstree 查看进程树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#top-%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E5%81%A5%E5%BA%B7%E7%8A%B6%E6%80%81"><span class="nav-number">9.4.</span> <span class="nav-text">top 查看系统健康状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#netstat-%E6%98%BE%E7%A4%BA%E7%BD%91%E7%BB%9C%E7%BB%9F%E8%AE%A1%E4%BF%A1%E6%81%AF%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">9.5.</span> <span class="nav-text">netstat 显示网络统计信息和端口占用情况</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#crond-%E7%B3%BB%E7%BB%9F%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-number">10.</span> <span class="nav-text">crond 系统定时任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#crond-%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="nav-number">10.1.</span> <span class="nav-text">crond 服务管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#crontab-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E8%AE%BE%E7%BD%AE"><span class="nav-number">10.2.</span> <span class="nav-text">crontab 定时任务设置</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
