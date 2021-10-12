@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="帮助命令man 获得帮助信息 基本语法  1man [命令或配置文件]  显示说明      信息 功能     NAME 命令的名称和单行描述   SYNOPSIS 怎样使用命令   DESCRIPTION 命令功能的深入讨论   EXAMPLES 怎样使用命令的例子   SEE ALSO 相关主题（通常是手册页）">
@@ -120,6 +120,11 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -251,7 +256,7 @@
 <h4 id="help-获得shell内置命令的帮助信息"><a href="#help-获得shell内置命令的帮助信息" class="headerlink" title="help 获得shell内置命令的帮助信息"></a>help 获得shell内置命令的帮助信息</h4><ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">help 命令</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">help</span> 命令</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -289,7 +294,7 @@
 <ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -302,7 +307,7 @@
 <h4 id="ls-列出目录的内容"><a href="#ls-列出目录的内容" class="headerlink" title="ls 列出目录的内容"></a>ls 列出目录的内容</h4><ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls [选项] [目录或是文件]</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls <span class="selector-attr">[选项]</span> <span class="selector-attr">[目录或是文件]</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>选项说明</li>
 </ul>
@@ -343,7 +348,7 @@
 <ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd  [参数]</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">cd</span> <span class="meta"> [参数]</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>参数说明</li>
 </ul>
@@ -408,7 +413,7 @@
 <ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir [选项] 要创建的目录</span><br></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> [选项] 要创建的目录</span><br></pre></td></tr></table></figure>
 <ul>
 <li>选项说明</li>
 </ul>
@@ -444,7 +449,7 @@
 <ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir 要删除的空目录</span><br></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rmdir</span> 要删除的空目录</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>案例实操</p>
 <ol>
@@ -457,7 +462,7 @@
 <h4 id="touch-创建空文件"><a href="#touch-创建空文件" class="headerlink" title="touch 创建空文件"></a>touch 创建空文件</h4><ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch 文件名称</span><br></pre></td></tr></table></figure>
+<figure class="highlight irpf90"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">touch</span> 文件名称</span><br></pre></td></tr></table></figure>
 <ul>
 <li>案例实操</li>
 </ul>
@@ -465,7 +470,7 @@
 <h4 id="cp-复制文件或目录"><a href="#cp-复制文件或目录" class="headerlink" title="cp 复制文件或目录"></a>cp 复制文件或目录</h4><ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp [选项] source dest 				（功能描述：复制source文件到dest）</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cp</span> [选项] <span class="keyword">source</span> dest 				（功能描述：复制<span class="keyword">source</span>文件到dest）</span><br></pre></td></tr></table></figure>
 <ul>
 <li>选项说明</li>
 </ul>
@@ -527,7 +532,7 @@
 <h4 id="rm-移除文件或目录"><a href="#rm-移除文件或目录" class="headerlink" title="rm 移除文件或目录"></a>rm 移除文件或目录</h4><ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm [选项] deleteFile        （功能描述：递归删除目录中所有内容）</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm <span class="selector-attr">[选项]</span> deleteFile        （功能描述：递归删除目录中所有内容）</span><br></pre></td></tr></table></figure>
 <ul>
 <li>选项说明</li>
 </ul>
@@ -589,7 +594,7 @@
 <ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat  [选项] 要查看的文件</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat  <span class="selector-attr">[选项]</span> 要查看的文件</span><br></pre></td></tr></table></figure>
 <ul>
 <li>选项说明</li>
 </ul>
@@ -727,7 +732,7 @@
 <li><p>案例实操</p>
 <ol>
 <li><p>采用less查看文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# less anaconda-ks.cfg</span><br></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="symbol">@hadoop100</span> ~]<span class="meta"># less anaconda-ks.cfg</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
@@ -736,7 +741,7 @@
 <ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo [选项] [输出内容]</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="selector-attr">[选项]</span> <span class="selector-attr">[输出内容]</span></span><br></pre></td></tr></table></figure>
 <p>选项：</p>
 <p>​    -e： 支持反斜线控制的字符转换</p>
 <div class="table-container">
@@ -894,7 +899,7 @@
 <h4 id="history-查看已经执行过历史命令"><a href="#history-查看已经执行过历史命令" class="headerlink" title="history 查看已经执行过历史命令"></a>history 查看已经执行过历史命令</h4><ul>
 <li>基本语法</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">history						（功能描述：查看已经执行过历史命令）</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">history</span>						（功能描述：查看已经执行过历史命令）</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>实操实例</p>
 <ol>
@@ -1023,7 +1028,7 @@
 <p>修改 /etc/sudoers 文件，找到下面一行(99行)，在root下面添加一行，如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">##Allow root to run any commands anywhere</span><br><span class="line">root    ALL&#x3D;(ALL)       ALL</span><br><span class="line">zhangsan   ALL&#x3D;(ALL)     ALL</span><br></pre></td></tr></table></figure>
 <p>或者配置成采用sudo命令时，不需要输入密码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## Allow root to run any commands anywhere</span><br><span class="line">root      ALL&#x3D;(ALL)     ALL</span><br><span class="line">zhangsan   ALL&#x3D;(ALL)     NOPASSWD:ALL</span><br></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## Allow root <span class="keyword">to</span> run <span class="keyword">any</span> commands anywhere</span><br><span class="line">root      <span class="keyword">ALL</span>=(<span class="keyword">ALL</span>)     <span class="keyword">ALL</span></span><br><span class="line">zhangsan   <span class="keyword">ALL</span>=(<span class="keyword">ALL</span>)     NOPASSWD:<span class="keyword">ALL</span></span><br></pre></td></tr></table></figure>
 <p>修改完毕，现在可以用zhangsan帐号登录，然后用命令 sudo ，即可获得root权限进行操作。</p>
 <ul>
 <li><p>案例实操</p>
@@ -1141,7 +1146,7 @@
 <ol>
 <li><p>如果查看到是文件：链接数指的是硬链接个数。创建硬链接方法</p>
 <p>ln [原文件] [目标文件]     </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 ~]# ln a&#x2F;b&#x2F;a.txt b.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[root@hadoop101 ~]</span># ln <span class="selector-tag">a</span>/<span class="selector-tag">b</span>/<span class="selector-tag">a</span><span class="selector-class">.txt</span> <span class="selector-tag">b</span><span class="selector-class">.txt</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>如果查看的是文件夹：链接数指的是子文件夹个数。</p>
 </li>
@@ -1937,7 +1942,7 @@
 <h3 id="crond-系统定时任务"><a href="#crond-系统定时任务" class="headerlink" title="crond 系统定时任务"></a>crond 系统定时任务</h3><h4 id="crond-服务管理"><a href="#crond-服务管理" class="headerlink" title="crond 服务管理"></a>crond 服务管理</h4><ul>
 <li>重新启动crond服务</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# service crond restart</span><br></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="symbol">@hadoop100</span> ~]<span class="meta"># service crond restart</span></span><br></pre></td></tr></table></figure>
 <h4 id="crontab-定时任务设置"><a href="#crontab-定时任务设置" class="headerlink" title="crontab 定时任务设置"></a>crontab 定时任务设置</h4><ul>
 <li>基本语法</li>
 </ul>
@@ -1972,7 +1977,7 @@
 <ul>
 <li>参数说明</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop100 ~]# crontab -e </span><br></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="symbol">@hadoop100</span> ~]<span class="meta"># crontab -e </span></span><br></pre></td></tr></table></figure>
 <p>（1）进入crontab编辑界面。会打开vim编辑你的工作。</p>
 <p>* <em> </em> <em> </em> 执行的任务</p>
 <div class="table-container">
@@ -2083,7 +2088,7 @@
 <li><p>案例实操</p>
 <ol>
 <li><p>每隔1分钟，向/root/a.txt文件中添加一个“hello world!”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*&#x2F;1 * * * * &#x2F;bin&#x2F;echo ”hello world!” &gt;&gt; &#x2F;root&#x2F;a.txt</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*<span class="regexp">/1 * * * * /</span>bin/echo ”hello world!” &gt;&gt; <span class="regexp">/root/</span>a.txt</span><br></pre></td></tr></table></figure></li>
 </ol>
 </li>
 </ul>
@@ -2189,8 +2194,10 @@
         </a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
